@@ -144,20 +144,20 @@
 <li><p>在该文件夹的路径下打开git bush ，输入以下指令</p>
 </li>
 <li><p>最后登录github到仓库中即可获取图片的网址</p>
-<p>git add . //加入到github仓库<br>git comment -m “文件描述” //提交文件<br>git push origin master //上传到github，git push 也可以<br>添加图片、设置大小并居中格式如下   </p>
-<center>
-<img src="图片网页" width="300" height="150">
-</center> // 实现居中
-
-</li>
-</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add . &#x2F;&#x2F;加入到github仓库</span><br><span class="line">git comment -m &quot;文件描述&quot; &#x2F;&#x2F;提交文件</span><br><span class="line">git push origin master &#x2F;&#x2F;上传到github，git push 也可以</span><br></pre></td></tr></table></figure>
+<p>添加图片、设置大小并居中格式如下   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;center&gt;</span><br><span class="line">&lt;img src&#x3D;&quot;图片网页&quot; width&#x3D;&quot;300&quot; height&#x3D;&quot;150&quot;&gt;</span><br><span class="line">&lt;&#x2F;center&gt; &#x2F;&#x2F; 实现居中</span><br></pre></td></tr></table></figure>
 <p>如果要在一行中同时显示两张图片，可使用 HTML 语法，让图片包括在 <code>&lt;table&gt;</code> 标签里面，同时也可以加入图片标题（可有可无），<code>&lt;tr&gt;</code>表示 table row,<code>&lt;td&gt;</code>表示table data，即表示一行中有多少数据。</p>
-<pre><code>&lt;table&gt;
- &lt;tr&gt;
-    &lt;td&gt;&lt;center&gt;&lt;img src=&quot;图片1网址&quot; width=&quot;180&quot; height=&quot;250&quot;&gt;图片标题&lt;/center&gt;&lt;/td&gt;
-    &lt;td&gt;&lt;center&gt;&lt;img src=&quot;图片2网址&quot; width=&quot;250&quot; height=&quot;250&quot;&gt;图片标题&lt;/center&gt;&lt;/td&gt;
- &lt;/tr&gt;
-&lt;/table&gt;</code></pre><h2 id="4-等待····"><a href="#4-等待····" class="headerlink" title="4. 等待····"></a>4. 等待····</h2>
+<table>
+<tr>
+   <td><center><img src="图片1网址" width="180" height="250">图片标题</center></td>
+   <td><center><img src="图片2网址" width="250" height="250">图片标题</center></td>
+</tr>
+</table>
+```
+## 4. 等待····</li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
