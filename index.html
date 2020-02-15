@@ -107,6 +107,79 @@
   
 
     
+    <article id="post-MarkDown语法总结，持续更新中·····" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/15/MarkDown%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93%EF%BC%8C%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7/" class="article-date">
+  <time datetime="2020-02-15T14:18:38.000Z" itemprop="datePublished">2020-02-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/15/MarkDown%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93%EF%BC%8C%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7/">MarkDown语法总结，持续更新中·····</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>//每一次写blog总会忘记MD的语法，本篇总结每一次用到的语句格式并持续更新····</p>
+<ol>
+<li><p>添加标题<br>  #+” “+标题 （几个”#”代表第几级标题，最多可有6级）<br>  这里插一句： 每行输入完后-&gt;按两次空格键再按一次Enter键-&gt;新起一行开始编辑并与上一行对其；  </p>
+</li>
+<li><p>单行代码语句<br> hello world 代码语句前后加” `` “</p>
+<p> <code>hello world</code>  </p>
+</li>
+<li><p>添加图片及设置图片格式<br>首先要知道在使用本地图片时在网页中是无法正常显示的，我使用的方法是将使用的本地图片上传到github仓库中，在将图片网址复制到MD中。  </p>
+<ul>
+<li>在github-&gt;repositories 新建含有一个文件夹(用于存放图片)的仓库  </li>
+<li>将新建的仓库clone到某个文件夹中-&gt; <code>git clone +网址</code></li>
+<li>将本地图片复制到对应新建仓库的文件夹中  </li>
+<li>在该文件夹的路径下打开git bush ，输入以下指令</li>
+<li>最后登录github到仓库中即可获取图片的网址<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git add . &#x2F;&#x2F;加入到github仓库</span><br><span class="line">git comment -m &quot;文件描述&quot; &#x2F;&#x2F;提交文件</span><br><span class="line">git push origin master &#x2F;&#x2F;上传到github，git push 也可以</span><br><span class="line">&#96;&#96;&#96;    </span><br><span class="line">添加图片、设置大小并居中格式如下</span><br></pre></td></tr></table></figure>
+<center>
+<img src="图片网页" width="300" height="150">
+</center> // 实现居中
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如果要在一行中同时显示两张图片，可使用 HTML 语法，让图片包括在 &#96;&#96;&lt;table&gt;&#96;&#96; 标签里面，同时也可以加入图片标题（可有可无），&#96;&#96;&lt;tr&gt;&#96;&#96;表示 table row,&#96;&#96; &lt;td&gt;&#96;&#96;表示table data，即表示一行中有多少数据。</span><br></pre></td></tr></table></figure>
+<table>
+<tr>
+   <td><center><img src="图片1网址" width="180" height="250">图片标题</center></td>
+   <td><center><img src="图片2网址" width="250" height="250">图片标题</center></td>
+</tr>
+</table>
+```</li>
+</ul>
+</li>
+<li><p>等待····</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://yoursite.com/2020/02/15/MarkDown%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93%EF%BC%8C%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD%C2%B7%C2%B7%C2%B7%C2%B7%C2%B7/" data-id="ck6nozyvn0000lcsg6j202k5v" class="article-share-link">分享到</a>
+      
+
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BE%AE%E4%B8%8D%E8%B6%B3%E9%81%93%E7%9A%84%E6%80%BB%E7%BB%93/" rel="tag">微不足道的总结</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+    
+  
+
+    
     <article id="post-雅思首考艰难记录（未完待续）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/02/14/%E9%9B%85%E6%80%9D%E9%A6%96%E8%80%83%E8%89%B0%E9%9A%BE%E8%AE%B0%E5%BD%95%EF%BC%88%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD%EF%BC%89/" class="article-date">
