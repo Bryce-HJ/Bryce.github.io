@@ -155,7 +155,7 @@
 </ul>
 </li>
 <li><p>UDP报文段结构</p>
-<center><img src="https://github.com/Bryce-HJ/IMG/raw/master/IMG/UDP%E6%8A%A5%E6%96%87%E6%AE%B5%E7%BB%93%E6%9E%84.jpg" width="300" height="150">
+<center><img src="https://github.com/Bryce-HJ/IMG/raw/master/IMG/UDP%E6%8A%A5%E6%96%87%E6%AE%B5%E7%BB%93%E6%9E%84.jpg" width="350" height="200">
 </center> 
 - UDP首部只有4个字段，每个字段由两个字节构成；
 - 通过端口号可以使目的主机将应用数据交给运行在目的端系统中的相应进程（即执行分解功能）；
@@ -186,7 +186,7 @@
 <li>对于接收方，如果一个序号为n的分组被正确接收到，并且按序，则接收方为分组n发送一个ACK，并将该分组中的数据部分交付到上层。在所有其他情况下，接收方对其该分组，并且为最近按序接收的分组重新发送ACK。即在GBN协议中，<font color=#DC143C>接收方丢弃所有失序分组</font><h3 id="4-4-选择重传（Selective-Repeat，SR）"><a href="#4-4-选择重传（Selective-Repeat，SR）" class="headerlink" title="4.4 选择重传（Selective Repeat，SR）"></a>4.4 选择重传（Selective Repeat，SR）</h3></li>
 <li>选择重传协议通过让发送方仅重传那些它怀疑在接收方出错（即受损或丢失）的分组而避免了不必要的重传。下图分别描述了SR发送方、接收方采取的动作。  <center><img src="https://github.com/Bryce-HJ/IMG/raw/master/IMG/SR%E5%8F%91%E9%80%81%E6%96%B9.png"  height="150">
 </center>
-<center><img src="https://github.com/Bryce-HJ/IMG/raw/master/IMG/SR%E6%8E%A5%E6%94%B6%E6%96%B9.png" width="612" height="150">
+<center><img src="https://github.com/Bryce-HJ/IMG/raw/master/IMG/SR%E6%8E%A5%E6%94%B6%E6%96%B9.png" width="900" height="150">
 </center> 
 
 </li>
@@ -199,7 +199,7 @@
 <li><p>TCP为每块客户数据配上一个TCP首部，从而形成了多个TCP报文段（TCP Segment）。这些报文段被下传给网络层，网络层将其分别封装在网络层IP数据报中。</p>
 </li>
 <li><p>TCP连接的组成包括：一台主机上的缓存、变量、和与进程连接的套接字，以及另一台主机上的另一组缓存、变量和进程连接的套接字。</p>
-<h3 id="5-2-TCP报文段结构"><a href="#5-2-TCP报文段结构" class="headerlink" title="5.2 TCP报文段结构"></a>5.2 TCP报文段结构</h3><center><img src="https://github.com/Bryce-HJ/IMG/raw/master/IMG/TCP%E6%8A%A5%E6%96%87%E6%AE%B5.png"  height="280"></center>
+<h3 id="5-2-TCP报文段结构"><a href="#5-2-TCP报文段结构" class="headerlink" title="5.2 TCP报文段结构"></a>5.2 TCP报文段结构</h3><center><img src="https://github.com/Bryce-HJ/IMG/raw/master/IMG/TCP%E6%8A%A5%E6%96%87%E6%AE%B5.png"  height="200"></center>
 </li>
 <li><p>TCP报文段首部中两个最重要的字段是序号字段和确认号字段。一个报文段的序号（sequence number for a segment）是该报文段首字节的字节流编号。主机A填充进报文段的确认号是主机A期望从主机B收到的下一字节的序号。</p>
 <h3 id="5-3-可靠数据传输"><a href="#5-3-可靠数据传输" class="headerlink" title="5.3 可靠数据传输"></a>5.3 可靠数据传输</h3></li>
