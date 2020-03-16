@@ -199,7 +199,7 @@
 <li><p>TCP为每块客户数据配上一个TCP首部，从而形成了多个<font color=#FFD700>TCP报文段（TCP Segment）。</font>这些报文段被下传给网络层，网络层将其分别封装在网络层IP数据报中。</p>
 </li>
 <li><p>TCP连接的组成包括：一台主机上的缓存、变量、和与进程连接的套接字，以及另一台主机上的另一组缓存、变量和进程连接的套接字。</p>
-<h3 id="5-2-TCP报文段结构"><a href="#5-2-TCP报文段结构" class="headerlink" title="5.2 TCP报文段结构"></a>5.2 TCP报文段结构</h3><center><img src="https://github.com/Bryce-HJ/IMG/raw/master/IMG/TCP%E6%8A%A5%E6%96%87%E6%AE%B5.png" width="300" height="250"></center>
+<h3 id="5-2-TCP报文段结构"><a href="#5-2-TCP报文段结构" class="headerlink" title="5.2 TCP报文段结构"></a>5.2 TCP报文段结构</h3><center><img src="https://github.com/Bryce-HJ/IMG/raw/master/IMG/TCP%E6%8A%A5%E6%96%87%E6%AE%B5.png" width="400" height="300"></center>
 </li>
 <li><p>TCP报文段首部中两个最重要的字段是<font color=#DC143C>序号字段</font>和<font color=#DC143C>确认号字段</font>。一个报文段的<font color=#FFD700>序号（sequence number for a segment）</font>是该报文段首字节的字节流编号。主机A填充进报文段的确认号是主机A期望从主机B收到的下一字节的序号。</p>
 <h3 id="5-3-可靠数据传输"><a href="#5-3-可靠数据传输" class="headerlink" title="5.3 可靠数据传输"></a>5.3 可靠数据传输</h3></li>
@@ -218,14 +218,14 @@
 <li>第三步：在收到SYNACK报文段后，客户也要给连接分配缓存和变量。客户端向主机发送另外一个报文段；这个最后一个报文段对服务器的允许链接的报文段进行了确认(通过将值server_isn+1放置到确认字段中来实现)，因为连接已经建立了，所以该SYN比特被置为0。该三次握手的第三个阶段可以在报文段负载中携带客户到服务器的数据。</li>
 </ul>
 </li>
-<li><p>至此完成了客户与服务器的TCP连接，在以后的每个报文段中，SYN比特都将被置为0。此连接过程通常被称为<font color=#FFD700>三次握手(three-way handshake)。</font><center><img src="https://github.com/Bryce-HJ/IMG/raw/master/IMG/TCP%20handshake.png" width="200" height="200"></center></p>
+<li><p>至此完成了客户与服务器的TCP连接，在以后的每个报文段中，SYN比特都将被置为0。此连接过程通常被称为<font color=#FFD700>三次握手(three-way handshake)。</font><center><img src="https://github.com/Bryce-HJ/IMG/raw/master/IMG/TCP%20handshake.png" width="300" height="300"></center></p>
 </li>
 <li><p>参与一条TCP连接的两个进程中的任何一个都能终止该连接：</p>
 <ul>
 <li>客户TCP向服务器发送一个特殊的TCP报文段，该报文段首部的一个标志位FIN比特置1；</li>
 <li>服务器接收到该报文后，向发送方回送一个确认报文段；</li>
 <li>服务器发送自己的终止报文段，其FIN比特被置1；//此时服务器用于该连接的资源被释放</li>
-<li>客户收到服务器的终止报文段后，向服务器发送确认报文段，等待客户端的定时溢出后，客户端用于该连接的资源被释放；至此，该TCP连接终止。<center><img src="https://github.com/Bryce-HJ/IMG/raw/master/IMG/TCP%20detach.png" width="200" height="250"></center>
+<li>客户收到服务器的终止报文段后，向服务器发送确认报文段，等待客户端的定时溢出后，客户端用于该连接的资源被释放；至此，该TCP连接终止。<center><img src="https://github.com/Bryce-HJ/IMG/raw/master/IMG/TCP%20detach.png" width="300" height="350"></center>
 ## 6 <font color=#FF1493>   拥塞控制原理</font>
 ###  6.1 拥塞原因与代价</li>
 </ul>
