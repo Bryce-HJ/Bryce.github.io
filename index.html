@@ -129,7 +129,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&#160; &#160; &#160; &#160;最近在自学计算机网络自顶向下，本人将所学知识点整理如下，方便复习及构建自己的知识框架体系，并且加入了相关章节在互联网面试过程中的涉及到的考点。本章的主要内容是运输层，共分为七小节。  </p>
+        <p>&#160; &#160; &#160; &#160;最近在自学计算机网络自顶向下，本人将所学知识点整理如下，方便复习及构建自己的知识框架体系，并且加入了相关章节在互联网面试过程中的涉及到的考点。本章的主要内容是运输层，共分为七小节。在文章末尾会有本章的两个WireShark实验。</p>
 <h2 id="1-概述和运输层服务"><a href="#1-概述和运输层服务" class="headerlink" title="1 概述和运输层服务"></a>1 概述和运输层服务</h2><ul>
 <li>运输层协议为运行在不同主机上的应用进程之间提供了逻辑通信（logic communication）功能，它只工作在端系统中，将来自应用进程的报文移动到网络边缘（即网络层）。<font color=#DC143C>值得注意的是：</font>网络层提供了主机之间的逻辑通信，而运输层为运行在主机上的进程之间提供了逻辑通信。</li>
 <li>TCP/IP网络为应用层提供了两种运输层协议，一种是<font color=#FFD700>UDP（用户数据协议，Uesr Data protocol）,</font>它提供了一种不可靠、无连接的服务；一种是<font color=#FFD700 >TCP（传输控制协议，Transmission Control Protocol）,</font>它提供了一种可靠的、面向连接的服务。</li>
@@ -265,6 +265,96 @@
 </li>
 </ul>
 <p>&#160; &#160; &#160; &#160;至此，我们结束了对运输层的讨论，我们将计算机网络划分成“网络边缘”和“网络核心”。网络边缘包含了在端系统中发生的事情，覆盖了应用层和运输层。接下来我们将进入网络核心的学习————网络层。</p>
+<h2 id="WireShark-Lab-TCP"><a href="#WireShark-Lab-TCP" class="headerlink" title="WireShark Lab:TCP"></a><font color=#FF1493>WireShark Lab:TCP</font></h2><h3 id="我的实验图片"><a href="#我的实验图片" class="headerlink" title="我的实验图片"></a>我的实验图片</h3><center>
+<img src="https://github.com/Bryce-HJ/IMG/raw/master/IMG/%E5%AE%9E%E9%AA%8C%E5%9B%BE%E5%83%8F.png" width="500" height="250">
+</center> 
+
+<h3 id="初步了解捕获包轨迹"><a href="#初步了解捕获包轨迹" class="headerlink" title="初步了解捕获包轨迹"></a>初步了解捕获包轨迹</h3><ol>
+<li>例子中源IP地址为 192.168.1.102 TCP源端口号为1161</li>
+<li>服务器 gaia.cs.umass.edu 的IP地址是128.119.245.12，端口号是80</li>
+<li>客户端使用的IP地址为 192.168.1.105 ，端口号为50520<h3 id="TCP-Basics"><a href="#TCP-Basics" class="headerlink" title="TCP Basics"></a>TCP Basics</h3></li>
+<li>序列号Seq = 0。SYN报文负责建立连接，该segment中SYN标志位被置1</li>
+<li>Seq = 0；ACK=1；将SYN中的Seq值加1，该segment中SYN、ACK标志位被置1</li>
+<li>Seq = 1</li>
+<li>the HTTP POST as the first segment:<br>RTT值=ACK时间—发送时间<br>EstimatedRTT=(1-α）·EstimatedRTT+αSampleRTT (α取0.125)</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">计数</th>
+<th align="center">序列号</th>
+<th align="center">发送时间</th>
+<th align="center">ACK时间</th>
+<th align="center">RTT值</th>
+<th align="center">EstimatedRTT值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0.026477</td>
+<td align="center">0.053937</td>
+<td align="center">0.02746‬</td>
+<td align="center">0.02746</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">566</td>
+<td align="center">0.041737</td>
+<td align="center">0.077294</td>
+<td align="center">0.035557‬</td>
+<td align="center">0.028472125</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">2026</td>
+<td align="center">0.054026</td>
+<td align="center">0.124085</td>
+<td align="center">0.070059‬‬</td>
+<td align="center">0.033670484375</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">3486</td>
+<td align="center">0.054690</td>
+<td align="center">0.169118</td>
+<td align="center">0.114428‬‬</td>
+<td align="center">0.043765173828125</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">4946</td>
+<td align="center">0.077405</td>
+<td align="center">0.217299</td>
+<td align="center">0.139894‬‬</td>
+<td align="center">0.05578127709960937</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">6406</td>
+<td align="center">0.078157</td>
+<td align="center">0.267802</td>
+<td align="center">0.189645‬‬</td>
+<td align="center">0.07251424246215821</td>
+</tr>
+</tbody></table>
+<ol start="8">
+<li>The length of first six TCP segmengts are: 565，1460，1460，1460，1460，1460</li>
+<li>接收窗口最小为5840，为建立TCP连接时服务器向主机第一次发送的报文（即第二次握手阶段）。缺少接收方缓存空间会限制发送方的传输，但是包中的窗口远大于实际发送的保文数量，因此不会限制。</li>
+<li>使用ip.src==192.168.1.102查看客户端发出的所有报文，发现seq序列号一直在增加，因此没有重传报文。</li>
+<li>观察了一些报文，发现是接收方收到一个报文即发送一个ACK，没有报多个合并确认。   //参考他人答案。</li>
+<li>WireShark输出的吞吐量折线：吞吐量计算为每秒收到的字节数。<center>
+<img src="https://github.com/Bryce-HJ/IMG/raw/master/IMG/Throughput.png" width="500" height="250">
+</center> 
+
+</li>
+</ol>
+<h3 id="TCP拥塞控制"><a href="#TCP拥塞控制" class="headerlink" title="TCP拥塞控制"></a>TCP拥塞控制</h3><ol start="13">
+<li>慢启动应该是0~0.305s，即横轴到达第一个骤增之处；好像没有拥塞避免阶段。</li>
+<li>慢启动阶段为0<del>1.12s，1.749</del>1.829s阶段为拥塞控制阶段，因为一定时间内发送的segment突然减少很多。<center>
+<img src="https://github.com/Bryce-HJ/IMG/raw/master/IMG/Throughput_mine.png" width="500" height="250">
+</center> </li>
+</ol>
 
       
     </div>
